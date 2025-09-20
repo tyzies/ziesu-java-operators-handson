@@ -155,34 +155,63 @@ public class UnaryOperatorsPractice {
         // - Gunakan while loop yang berjalan 5 kali menggunakan post-increment
         // Buat variabel 'i' dimulai dari 1, kondisi: i <= 5, increment: i++
         // Print loop counter setiap iterasi
+        int i = 1;
+        while (i <= 5) {
+            System.out.println("Counter [i]: " + i);
+            i++;
+        }
 
         // - Gunakan while loop yang menghitung mundur dari 3 ke 1 menggunakan post-decrement
         // Buat variabel 'countdown' dimulai dari 3, kondisi: countdown > 0, decrement: countdown--
         // Print "Countdown: " + countdown setiap iterasi
+        int countdown = 3;
+        while (countdown > 0) {
+            System.out.println("Countdown: " + countdown);
+            countdown--;
+        }
 
         // ===== SKENARIO MENANTANG =====
         System.out.println("\n=== SKENARIO MENANTANG ===");
 
         // Latihan 8: Skenario increment/decrement kompleks
         // - Buat variabel 'value' dengan nilai awal 5
+        int value = 5;
 
         // - Hitung dan simpan hasil dari: value++ + ++value
         // Print kedua hasil dan nilai akhir dari 'value'
+        System.out.println("Value (value++ + ++value): " + (value++ + ++value));
 
         // - Reset value ke 5, lalu hitung: --value + value--
         // Print kedua hasil dan nilai akhir dari 'value'
+        value = 5;
+        System.out.println("Value (--value + value--): " + (--value + value--));
 
         // - Prediksi hasilnya sebelum menjalankan dan tambahkan komentar dengan prediksi Anda
+        // Prediksi: 13 & 8
+        // Hasil asli: 12 & 8
 
         // Latihan 9: Increment/Decrement dengan pemanggilan method
         // - Buat variabel 'score' dengan nilai 10
+        int score = 10;
 
         // - Print hasil dari Math.max(++score, 12)
         // Kemudian print nilai score saat ini
+        System.out.println(Math.max(++score, 12));
+        System.out.println("Score: " + score);
 
         // - Reset score ke 10, lalu print hasil dari Math.max(score++, 12)
         // Kemudian print nilai score saat ini
+        score = 10;
+        System.out.println(Math.max(score++, 12));
+        System.out.println("Score: " + score);
 
         // - Komentari perbedaan perilaku yang Anda amati
+        // Perbedaan utama:
+        // - Pre-increment (++x / --x): nilai diubah dulu, baru dipakai.
+        // - Post-increment (x++ / x--): nilai lama dipakai dulu, baru diubah.
+        // - Contoh: result1 = ++a → langsung dapat nilai baru;
+        //           result2 = b++ → pakai nilai lama, lalu b bertambah.
+        // - Pada ekspresi gabungan (value++ + ++value), hasil tergantung urutan evaluasi kiri → kanan.
+
     }
 }
